@@ -1,0 +1,75 @@
+@import "../../components/mixins";
+
+.header {
+  padding: 33px 0 32px 0;
+  height: 100px;
+  background: #e1ede6;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 495px;
+  }
+
+  &__content {
+    display: flex;
+    height: 35px;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__name {
+    @include text-style(20px, 500, #598d66);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    height: 23px;
+
+    column-gap: 60px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: max-content max-content max-content max-content;
+
+    &-itm {
+      padding: 0px 5px;
+      @include text-style(20px, 500, #2c2d35);
+
+      &:hover {
+        transition: color 0.3s ease;
+        color: #598d66;
+      }
+      &:focus {
+        color: #2c2d35;
+        background: #d4e8d9;
+      }
+      &:active {
+        color: #376b44;
+      }
+    }
+
+    &-itm-cart {
+      color: #2c2d35;
+      padding: 1px;
+      display: flex;
+      height: 24px;
+
+      &:hover {
+        transition: color 0.3s ease;
+        color: #598d66;
+      }
+      &:focus {
+        color: #598d66;
+
+        background: #d4e8d9;
+      }
+      &:active {
+        color: #376b44;
+      }
+    }
+  }
+}

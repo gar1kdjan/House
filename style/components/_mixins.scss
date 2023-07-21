@@ -1,0 +1,11 @@
+@mixin text-style($font-size, $fw, $color, $line-height: null) {
+  font-family: "Raleway ";
+  font-size: $font-size;
+  font-weight: $fw;
+  color: $color;
+  font-style: normal;
+
+  @if $line-height {
+    line-height: $line-height;
+  }
+}
