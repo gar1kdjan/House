@@ -1,0 +1,84 @@
+@import "../../components/mixins";
+
+.footer {
+  margin-top: 70px;
+  background: #e1ede6;
+  &__wrapper {
+    padding-bottom: 23px;
+    padding-top: 23px;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: space-between;
+  }
+  &__logo-block {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 35px;
+  }
+  &__logo {
+    display: inline-flex;
+    height: 35px;
+    align-items: center;
+    gap: 8px;
+    // &-img {
+    // }
+    &-title {
+      @include text-style(20px, 700, #598d66, normal);
+    }
+  }
+  &__contact {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 8px;
+    &-tel {
+      @include text-style(20px, 500, #2c2d35, normal);
+    }
+    &-title {
+      @include text-style(18px, 500, #86928b, normal);
+    }
+  }
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+
+    column-gap: 60px;
+    &-title {
+      @include text-style(20px, 500, #2c2d35, normal);
+    }
+    &-rows {
+      @include text-style(18px, 500, #86928b, 150%);
+      margin-top: 6px;
+      display: grid;
+      grid-template-rows: repeat(3, max-content);
+      row-gap: 6px;
+    }
+  }
+  &__icon {
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(3, max-content);
+      column-gap: 30px;
+    }
+    &-item {
+      &:hover {
+        color: #598d66;
+
+        transition: background-color 0.3s ease;
+      }
+      &:focus {
+        color: #598d66;
+        background: #d4e8d9;
+      }
+      &:active {
+        color: #376b44;
+      }
+    }
+  }
+  &__copyright {
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 6px;
+    @include text-style(12px, 500, #86928b, 120%);
+  }
+}

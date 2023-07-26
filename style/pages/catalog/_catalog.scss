@@ -33,7 +33,13 @@
       border: 2px solid #598d66;
       background: #d4e8d9;
     }
+
     &:active {
+      color: #f4f6f5;
+      background: #376b44;
+    }
+    &.active {
+      display: block;
       color: #f4f6f5;
       background: #376b44;
     }

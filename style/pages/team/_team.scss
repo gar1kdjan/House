@@ -1,0 +1,40 @@
+@import "../../components/mixins";
+
+.team {
+  &__wrapper {
+    column-gap: 30px;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+  }
+  &__img {
+    max-width: 445px;
+    width: 100%;
+  }
+  &__content {
+    width: 100%;
+    max-width: 559px;
+    margin-bottom: 44px;
+    margin-top: 124px;
+
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 20px;
+  }
+  &__titile {
+    @include text-style(40px, 500, #2c2d35, 110%);
+  }
+  &__text {
+    @include text-style(18px, 500, #2c2d35, 150%);
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 30px;
+  }
+  &__icon {
+    max-width: 80px;
+    width: 100%;
+  }
+}
