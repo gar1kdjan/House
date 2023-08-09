@@ -1,31 +1,3 @@
-// const footerLinks = document.querySelectorAll(".footer-link");
-
-// footerLinks.forEach((link) => {
-//   link.addEventListener("click", function (event) {
-//     event.preventDefault();
-
-//     const targetId = link.getAttribute("data-target");
-//     const targetBlock = document.getElementById(targetId);
-
-//     if (targetBlock) {
-//       // Скрыть все блоки контента
-//       const contentBlocks = document.querySelectorAll(".content-block");
-//       contentBlocks.forEach((block) => {
-//         block.style.display = "none";
-//       });
-
-//       // Показать выбранный блок контента
-//       targetBlock.style.display = "grid";
-
-//       // Плавный скролл к выбранному блоку
-//       window.scrollTo({
-//         top: targetBlock.offsetTop,
-//         behavior: "smooth",
-//       });
-//     }
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".catalog__btn");
   const blocks = document.querySelectorAll(".card__wrapper-js");
