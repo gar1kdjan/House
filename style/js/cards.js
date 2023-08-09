@@ -1,27 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".catalog__btn");
-  const blocks = document.querySelectorAll(".card__wrapper-js");
+let cartItemCount = 0;
+const cartCounterElement = document.querySelector(
+  ".header__menu-itm-cart-counter"
+);
+const addToCartBtns = document.querySelectorAll(".addToCartBtn");
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const targetBlock = this.getAttribute("data-target");
+addToCartBtns.forEach((button) => {
+  button.addEventListener("click", () => {
+    cartItemCount++;
+    updateCartCounter();
 
-      // Скрыть все блоки контента
-      blocks.forEach((block) => {
-        block.classList.remove("active");
-      });
+    button.textContent = "В корзине";
+    button.disabled = true;
 
-      // Показать только целевой блок контента
-      const activeBlock = document.getElementById(targetBlock);
-      activeBlock.classList.add("active");
-
-      // Добавить класс active к активной кнопке
-      buttons.forEach((btn) => {
-        btn.classList.remove("active");
-      });
-      this.classList.add("active");
-    });
+    setTimeout(() => {
+      button.textContent = "В корзину";
+      button.disabled = false;
+    }, 1000);
   });
-  buttons[0].classList.add("active");
-  blocks[0].classList.add("active");
+
+  function updateCartCounter() {
+    cartCounterElement.textContent = cartItemCount;
+
+    if (cartItemCount > 0) {
+      cartCounterElement.style.display = "inline-block";
+    }
+  }
 });

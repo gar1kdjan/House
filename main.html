@@ -23,9 +23,13 @@
             <!-- //menu -->
             <nav class="header__nav">
               <ul class="header__menu">
-                <li><a class="header__menu-itm" href="#">Репродукции</a></li>
-                <li><a class="header__menu-itm" href="#">Новинки</a></li>
-                <li><a class="header__menu-itm" href="#">О нас</a></li>
+                <li>
+                  <a class="header__menu-itm" href="#catalog">Репродукции</a>
+                </li>
+                <li>
+                  <a class="header__menu-itm" href="#new__wrapper">Новинки</a>
+                </li>
+                <li><a class="header__menu-itm" href="#team">О нас</a></li>
                 <li>
                   <a class="header__menu-itm-cart" href="#"
                     ><svg
@@ -56,7 +60,9 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       /></svg
-                    ><span class="header__menu-itm-cart-counter add_cart"
+                    ><span
+                      class="header__menu-itm-cart-counter"
+                      style="display: none"
                       >0</span
                     ></a
                   >
@@ -86,7 +92,7 @@
       </div>
     </section>
     <!-- //catalog -->
-    <section class="catalog">
+    <section id="catalog" class="catalog">
       <div class="container">
         <div class="catalog__wrapper">
           <div class="catalog__container">
@@ -102,7 +108,10 @@
           </div>
         </div>
         <!-- //card france -->
-        <div class="card__wrapper card__wrapper-js active" id="block1">
+        <div
+          class="card__wrapper card__wrapper-js active content-block"
+          id="block1"
+        >
           <!-- //card-1 -->
           <div class="card__container">
             <img class="card__img" src="style/img/jpj/france/1.jpg" alt="1" />
@@ -171,7 +180,7 @@
           </div>
         </div>
         <!-- //card germany -->
-        <div class="card__wrapper card__wrapper-js" id="block2">
+        <div class="card__wrapper card__wrapper-js content-block" id="block2">
           <!-- //card-1 -->
           <div class="card__container">
             <img class="card__img" src="style/img/jpj/germany/1.jpg" alt="1" />
@@ -240,7 +249,7 @@
           </div>
         </div>
         <!-- //card england -->
-        <div class="card__wrapper card__wrapper-js" id="block3">
+        <div class="card__wrapper card__wrapper-js content-block" id="block3">
           <!-- //card-1 -->
           <div class="card__container">
             <img class="card__img" src="style/img/jpj/england/1.jpg" alt="1" />
@@ -311,7 +320,7 @@
       </div>
     </section>
     <!-- //new__collection -->
-    <section class="new__wrapper">
+    <section id="new__wrapper" class="new__wrapper">
       <div class="container">
         <div class="new__block">
           <img src="/style/img/svg/3.svg" alt="3" />
@@ -325,7 +334,7 @@
         <button class="new__btn">Ознакомиться</button>
       </div>
     </section>
-    <section class="team">
+    <section id="team" class="team">
       <div class="container">
         <div class="team__wrapper">
           <img class="team__img" src="./style/img/jpj/11.jpg" alt="11" />
@@ -347,7 +356,7 @@
       </div>
     </section>
     <!-- //footer -->
-    <section class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer__wrapper">
           <!-- //logo -->
@@ -374,9 +383,21 @@
             <div>
               <span class="footer__nav-title">Репродукции</span>
               <ul class="footer__nav-rows">
-                <li><a href="#">Франция</a></li>
-                <li><a href="#">Германия</a></li>
-                <li><a href="#">Англия</a></li>
+                <li>
+                  <a href="#" class="footer-link" data-target="block1"
+                    >Франция</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="footer-link" data-target="block2"
+                    >Германия</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="footer-link" data-target="block3"
+                    >Англия</a
+                  >
+                </li>
               </ul>
             </div>
             <div>
@@ -450,9 +471,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <script src="style/js/cards.js"></script>
-    <script src="style/js/cart_item_count.js"></script>
-    <script src="style/js/btn_animation.js"></script>
+    </footer>
+
+    <script src="style/js/footer__links.js"></script>
   </body>
 </html>
