@@ -2,14 +2,20 @@
 
 .catalog {
   &__wrapper {
+    max-width: 1110px;
+    width: 100%;
   }
   &__container {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
+    @media (max-width: $md) {
+      max-width: 690px;
+      width: 100%;
+    }
   }
   &__title {
-    @include text-style(40px, 500, #2c2d35, 110%);
+    @include text-style(40px, 500, #2c2d35, 30px, 110%);
   }
   &__countries {
     display: grid;

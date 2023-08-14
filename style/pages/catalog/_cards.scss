@@ -8,6 +8,12 @@
     display: grid;
     grid-template-columns: repeat(3, max-content);
     grid-template-rows: repeat(2, max-content);
+    @media (max-width: $md) {
+      max-width: 690px;
+      width: 100%;
+      grid-template-columns: repeat(2, max-content);
+      grid-template-rows: repeat(3, max-content);
+    }
     &-js {
       display: none;
     }
@@ -15,12 +21,20 @@
   &__container {
     max-width: 350px;
     background-color: #e1ede6;
+    @media (max-width: $md) {
+      max-width: 330px;
+      width: 100%;
+    }
   }
   &__img {
     margin: 20px;
 
     max-width: 310px;
     width: 100%;
+    @media (max-width: $md) {
+      max-width: 290px;
+      width: 100%;
+    }
   }
   &__block {
     display: grid;
@@ -58,6 +72,10 @@
     border: 1px solid #598d66;
     transition: background-color 0.3s ease;
     @include text-style(20px, 500, #2c2d35, normal);
+    @media (max-width: $md) {
+      max-width: 290px;
+      width: 100%;
+    }
 
     &:hover {
       color: #f4f6f5;

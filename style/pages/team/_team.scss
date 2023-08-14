@@ -1,4 +1,5 @@
 @import "../../components/mixins";
+@import "../../setting/sizes";
 
 .team {
   &__wrapper {
@@ -6,6 +7,12 @@
     margin-top: 70px;
     display: grid;
     grid-template-columns: repeat(2, max-content);
+
+    @media (max-width: $md) {
+      grid-template-columns: none;
+      grid-template-rows: repeat(2, max-content);
+      row-gap: 40px;
+    }
   }
   &__img {
     max-width: 445px;
@@ -20,12 +27,27 @@
     display: grid;
     grid-template-rows: repeat(3, max-content);
     row-gap: 20px;
+    @media (max-width: $md) {
+      max-width: 631px;
+      width: 100%;
+      margin-top: 0px;
+      grid-template-columns: none;
+      grid-template-rows: repeat(3, max-content);
+      row-gap: 30px;
+      margin-bottom: 70px;
+    }
   }
   &__titile {
     @include text-style(40px, 500, #2c2d35, 110%);
+    @media (max-width: $md) {
+      @include text-style(40px, 500, #2c2d35, 30px, 110%);
+    }
   }
   &__text {
     @include text-style(18px, 500, #2c2d35, 150%);
+    @media (max-width: $md) {
+      @include text-style(18px, 500, #2c2d35, 18, 150%);
+    }
   }
 
   &__block {

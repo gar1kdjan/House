@@ -1,9 +1,14 @@
-@mixin text-style($font-size, $fw, $color, $line-height: null) {
+@import "../setting/sizes";
+
+@mixin text-style($font-size, $fw, $color, $media, $line-height: null) {
   font-family: "Raleway ";
   font-size: $font-size;
   font-weight: $fw;
   color: $color;
   font-style: normal;
+  @media (max-width: $md) {
+    font-size: $media;
+  }
 
   @if $line-height {
     line-height: $line-height;

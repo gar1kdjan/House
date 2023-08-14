@@ -1,14 +1,22 @@
 @import "../../components/mixins";
+@import "../../setting/sizes";
 
 .header {
   padding: 33px 0 32px 0;
   height: 100px;
   background: #e1ede6;
+  @media (max-width: $md) {
+    gap: 102px;
+  }
 
   &__wrapper {
     display: grid;
     grid-template-columns: max-content max-content;
     gap: 495px;
+    @media (max-width: $md) {
+      width: 690px;
+      gap: 101px;
+    }
   }
 
   &__content {
@@ -19,7 +27,7 @@
   }
 
   &__name {
-    @include text-style(20px, 500, #598d66);
+    @include text-style(20px, 500, #598d66, 18px);
   }
 
   &__nav {
@@ -37,7 +45,7 @@
 
     &-itm {
       padding: 0px 5px;
-      @include text-style(20px, 500, #2c2d35);
+      @include text-style(20px, 500, #2c2d35, 18px);
 
       &:hover {
         transition: color 0.3s ease;
