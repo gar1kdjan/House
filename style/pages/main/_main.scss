@@ -1,4 +1,3 @@
-@import "../../components/mixins";
 @import "../../setting/sizes";
 
 //main
@@ -13,6 +12,10 @@
       width: 100%;
       column-gap: 30px;
     }
+    @media (max-width: $sm) {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
   }
   &__img {
     max-width: 540px;
@@ -22,21 +25,45 @@
       width: 100%;
       height: 380px;
     }
+    @media (max-width: $sm) {
+      max-width: 195px;
+      width: 100%;
+      height: 239px;
+    }
   }
   &__block {
     margin-top: 145px;
-    max-width: 540px;
+    max-width: 528px;
     width: 100%;
-    height: 331px;
+    // height: 331px;
     @media (max-width: $md) {
       margin-top: 35px;
       margin-bottom: 37px;
       max-width: 330px;
       width: 100%;
     }
+    @media (max-width: $sm) {
+      margin-top: 0;
+      margin-bottom: 0;
+      max-width: 285px;
+      width: 100%;
+      // height: 239px;
+    }
   }
   &__title {
-    @include text-style(60px, 500, #2c2d35, 48px, 100%);
+    color: #2c2d35;
+    font-family: Raleway;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 66px */
+
+    @media (max-width: $md) {
+      font-size: 40px;
+    }
+    @media (max-width: $md) {
+      font-size: 36px;
+    }
 
     &-green {
       color: #598d66;
@@ -45,13 +72,25 @@
   &__text {
     margin-top: 20px;
     margin-bottom: 60px;
-    @include text-style(18px, 500, #86928b, 18px, 150%);
+    color: #86928b;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
     @media (max-width: $md) {
       max-width: 300px;
       width: 100%;
+
       margin-top: 20px;
       margin-bottom: 40px;
-      height: 108px;
+    }
+    @media (max-width: $sm) {
+      max-width: 270px;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
   }
   &__btn {
@@ -67,12 +106,24 @@
     flex-shrink: 0;
     border: 1px solid #598d66;
 
-    @include text-style(20px, 500, #86928b, normal);
+    color: #598d66;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 
     @media (max-width: $md) {
       max-width: 210px;
-      height: 60px;
       width: 100%;
+      height: 60px;
+    }
+    @media (max-width: $sm) {
+      max-width: 178px;
+      width: 100%;
+      height: 50px;
+
+      font-size: 18px;
     }
 
     &:hover {

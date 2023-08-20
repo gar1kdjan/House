@@ -1,4 +1,4 @@
-@import "../../components/mixins";
+@import "../../setting/sizes";
 
 .card {
   &__wrapper {
@@ -25,6 +25,10 @@
       max-width: 330px;
       width: 100%;
     }
+    @media (max-width: $sm) {
+      max-width: 240px;
+      width: 100%;
+    }
   }
   &__img {
     margin: 20px;
@@ -33,6 +37,11 @@
     width: 100%;
     @media (max-width: $md) {
       max-width: 290px;
+      width: 100%;
+    }
+    @media (max-width: $sm) {
+      margin-bottom: 15px;
+      max-width: 200px;
       width: 100%;
     }
   }
@@ -44,23 +53,61 @@
     padding-right: 20px;
   }
   &__name {
-    @include text-style(18px, 500, #86928b, normal);
+    color: #86928b;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
   }
   &__title {
     margin-top: 10px;
     margin-bottom: 8px;
-    @include text-style(30px, 500, #2c2d35, normal);
+
+    color: #2c2d35;
+    font-family: Raleway;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @media (max-width: $sm) {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
   }
   &__description {
-    @include text-style(18px, 500, #2c2d35, normal);
+    color: #2c2d35;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
   }
   &__price {
     margin-top: 30px;
     margin-bottom: 20px;
-    @include text-style(24px, 500, #598d66, normal);
+
+    color: #598d66;
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @media (max-width: $sm) {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
   }
 
-  // Общие стили для кнопки
   &__btn {
     margin-bottom: 30px;
     display: flex;
@@ -70,11 +117,24 @@
     justify-content: center;
     align-items: center;
     border: 1px solid #598d66;
+
     transition: background-color 0.3s ease;
-    @include text-style(20px, 500, #2c2d35, normal);
+    color: #598d66;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
     @media (max-width: $md) {
       max-width: 290px;
       width: 100%;
+    }
+    @media (max-width: $sm) {
+      font-size: 18px;
+      max-width: 200px;
+      width: 100%;
+      height: 50px;
     }
 
     &:hover {

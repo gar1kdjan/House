@@ -1,6 +1,10 @@
-@import "../../components/mixins";
+@import "../../setting/sizes";
 
 .catalog {
+  margin-top: 70px;
+  @media (max-width: $sm) {
+    margin-top: 0;
+  }
   &__wrapper {
     max-width: 1110px;
     width: 100%;
@@ -13,9 +17,24 @@
       max-width: 690px;
       width: 100%;
     }
+    @media (max-width: $sm) {
+      max-width: 408px;
+      width: 100%;
+      grid-template-columns: none;
+      grid-template-rows: repeat(2, max-content);
+      row-gap: 20px;
+    }
   }
   &__title {
-    @include text-style(40px, 500, #2c2d35, 30px, 110%);
+    color: #2c2d35;
+    font-family: Raleway;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 44px */
+    @media (max-width: $sm) {
+      font-size: 24px;
+    }
   }
   &__countries {
     display: grid;
@@ -27,7 +46,25 @@
     border-radius: 20px;
     background: #d4e8d9;
     border: 2px solid transparent;
-    @include text-style(20px, 500, #2c2d35, normal);
+
+    color: #2c2d35;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @media (max-width: $sm) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      max-width: 108px;
+      width: 100%;
+      font-size: 18px;
+
+      height: 41px;
+    }
 
     &:hover {
       color: #f4f6f5;
