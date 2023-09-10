@@ -16,6 +16,10 @@
       margin-top: 50px;
       margin-bottom: 50px;
     }
+    @media (max-width: $xs) {
+      margin: 60 0px;
+      grid-template-columns: max-content;
+    }
   }
   &__img {
     max-width: 540px;
@@ -29,6 +33,9 @@
       max-width: 195px;
       width: 100%;
       height: 239px;
+    }
+    @media (max-width: $xs) {
+      display: none;
     }
   }
   &__block {
@@ -64,6 +71,9 @@
     @media (max-width: $md) {
       font-size: 36px;
     }
+    @media (max-width: $xs) {
+      font-size: 30px;
+    }
 
     &-green {
       color: #598d66;
@@ -91,6 +101,10 @@
       font-size: 16px;
       margin-top: 10px;
       margin-bottom: 10px;
+    }
+    @media (max-width: $xs) {
+      font-size: 14px;
+      margin: 20px 0 40px 0;
     }
   }
   &__btn {
@@ -120,6 +134,13 @@
     }
     @media (max-width: $sm) {
       max-width: 178px;
+      width: 100%;
+      height: 50px;
+
+      font-size: 18px;
+    }
+    @media (max-width: $xs) {
+      max-width: 154px;
       width: 100%;
       height: 50px;
 

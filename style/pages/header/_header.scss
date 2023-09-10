@@ -1,5 +1,9 @@
 @import "../../setting/sizes";
 
+.open {
+  display: flex !important;
+}
+
 .header {
   padding: 33px 0 32px 0;
   height: 100px;
@@ -10,6 +14,11 @@
   @media (max-width: $sm) {
     height: 123px;
     padding: 16px 0 16px 0;
+  }
+  @media (max-width: $xs) {
+    background: #fff;
+    height: 68px;
+    padding: 16px 15px;
   }
 
   &__wrapper {
@@ -30,6 +39,23 @@
       grid-template-rows: repeat(2, max-content);
       gap: 16px;
     }
+    @media (max-width: $xs) {
+      max-width: 576px;
+      width: 100%;
+      grid-template-columns: none;
+      grid-template-rows: none;
+      gap: 0px;
+    }
+    &-mob {
+      width: 100%;
+      display: none;
+      background: #e1ede6;
+
+      @media (max-width: $xs) {
+        display: grid;
+        padding: 0;
+      }
+    }
   }
 
   &__content {
@@ -40,6 +66,10 @@
 
     @media (max-width: $sm) {
       justify-content: center;
+    }
+    @media (max-width: $xs) {
+      max-width: 290px;
+      width: 100%;
     }
   }
 
@@ -60,6 +90,9 @@
     @media (max-width: $sm) {
       display: block;
     }
+    @media (max-width: $sm) {
+      display: none;
+    }
   }
 
   &__menu {
@@ -75,7 +108,37 @@
       width: 100%;
       justify-content: space-between;
     }
+    @media (max-width: $xs) {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 50px;
+      margin-top: 68px;
+      position: fixed;
+      height: 433px;
+      width: 100%;
+      max-width: 320px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      padding: 76px 188px 126px 15px;
+      overflow-y: auto;
+      background: #e1ede6;
+      animation: burgerAnimation 0, 0.4s;
 
+      overflow: hidden;
+    }
+    &-mob {
+      display: none;
+      @media (max-width: $xs) {
+        align-items: center;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: max-content max-content;
+      }
+    }
     &-itm {
       padding: 0px 5px;
       color: #2c2d35;
@@ -105,6 +168,9 @@
       height: 24px;
       @media (max-width: $sm) {
         // padding-left: 64px;
+      }
+      @media (max-width: $xs) {
+        display: none;
       }
 
       &:hover {
@@ -140,6 +206,64 @@
         font-weight: 700;
         line-height: normal;
       }
+      &-mob {
+        width: fit-content;
+        color: #2c2d35;
+        padding: 1px;
+        display: flex;
+        height: auto;
+        padding: 15px 0;
+
+        @media (max-width: $xs) {
+          display: block;
+        }
+
+        &:hover {
+          transition: color 0.3s ease;
+          color: #598d66;
+        }
+        &:focus {
+          color: #598d66;
+
+          background: #d4e8d9;
+        }
+        &:active {
+          color: #376b44;
+        }
+        &-counter {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 1px;
+
+          width: 13px;
+          height: 13px;
+          position: absolute;
+
+          border-radius: 50%;
+
+          color: #fff;
+          background: #598d66;
+          text-align: center;
+          font-family: Raleway;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
     }
   }
+}
+
+.close-icon {
+  display: none;
+  position: fixed; /* Устанавливаем абсолютное позиционирование */
+  z-index: 50;
+}
+/* Стили для SVG-изображений */
+.menu-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: #000; /* Цвет иконок */
 }
