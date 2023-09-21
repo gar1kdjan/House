@@ -196,6 +196,9 @@
       // margin-bottom: 16px;
       display: block;
     }
+    @media (max-width: $xs) {
+      max-width: 415px;
+    }
   }
 
   &__icon {

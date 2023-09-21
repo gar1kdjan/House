@@ -331,8 +331,8 @@ a:active {
 }
 @media (max-width: 400px) {
   .container {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 
@@ -1453,6 +1453,11 @@ a:active {
   .footer__line {
     margin: 16px 0;
     display: block;
+  }
+}
+@media (max-width: 400px) {
+  .footer__line {
+    max-width: 415px;
   }
 }
 @media (max-width: 768px) {
