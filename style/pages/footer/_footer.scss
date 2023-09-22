@@ -108,6 +108,14 @@
       font-style: normal;
       font-weight: 500;
       line-height: normal;
+      &-mob {
+        color: #2c2d35;
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
     }
     &-title {
       color: #86928b;
@@ -143,7 +151,7 @@
       justify-content: space-between;
     }
     @media (max-width: $xs) {
-      max-width: 283px;
+      max-width: 360px;
       width: 100%;
       grid-template-columns: repeat(2, max-content);
       column-gap: 0px;

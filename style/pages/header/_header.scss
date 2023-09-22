@@ -1,7 +1,7 @@
 @import "../../setting/sizes";
 
 .open {
-  display: flex !important;
+  display: grid !important;
 }
 
 .header {
@@ -102,7 +102,7 @@
     column-gap: 60px;
     display: grid;
     align-items: center;
-    grid-template-columns: max-content max-content max-content max-content;
+    grid-template-columns: repeat(4, max-content);
 
     @media (max-width: $sm) {
       max-width: 510px;
@@ -111,14 +111,14 @@
     }
     @media (max-width: $xs) {
       display: none;
-      flex-direction: column;
-      align-items: flex-start;
+      grid-template-columns: none;
+      grid-template-rows: repeat(3, max-content);
       gap: 50px;
       margin-top: 68px;
       position: fixed;
-      height: 433px;
+      height: 100%;
       width: 100%;
-      max-width: 320px;
+      // max-width: 320px;
       top: 0;
       bottom: 0;
       left: 0;
@@ -237,10 +237,6 @@
         display: flex;
         height: auto;
         padding: 15px 0;
-
-        @media (max-width: $xs) {
-          display: block;
-        }
 
         &:hover {
           transition: color 0.3s ease;

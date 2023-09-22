@@ -331,13 +331,13 @@ a:active {
 }
 @media (max-width: 400px) {
   .container {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
 .open {
-  display: flex !important;
+  display: grid !important;
 }
 
 .header {
@@ -452,7 +452,7 @@ a:active {
        column-gap: 60px;
   display: grid;
   align-items: center;
-  grid-template-columns: max-content max-content max-content max-content;
+  grid-template-columns: repeat(4, max-content);
 }
 @media (max-width: 576px) {
   .header__menu {
@@ -464,14 +464,13 @@ a:active {
 @media (max-width: 400px) {
   .header__menu {
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, max-content);
     gap: 50px;
     margin-top: 68px;
     position: fixed;
-    height: 433px;
+    height: 100%;
     width: 100%;
-    max-width: 320px;
     top: 0;
     bottom: 0;
     left: 0;
@@ -583,11 +582,6 @@ a:active {
   display: flex;
   height: auto;
   padding: 15px 0;
-}
-@media (max-width: 400px) {
-  .header__menu-itm-cart-mob {
-    display: block;
-  }
 }
 .header__menu-itm-cart-mob:hover {
   transition: color 0.3s ease;
@@ -964,8 +958,8 @@ a:active {
 @media (max-width: 400px) {
   .new__wrapper {
     margin-top: 60px;
-    background-image: url(./img/jpg/bg/320.jpg);
-    max-width: 320px;
+    background-image: url(./img/jpg/bg/400.jpg);
+    max-width: 400px;
     width: 100%;
     height: 552px;
     background-repeat: no-repeat;
@@ -1368,6 +1362,14 @@ a:active {
   font-weight: 500;
   line-height: normal;
 }
+.footer__contact-tel-mob {
+  color: #2c2d35;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 .footer__contact-title {
   color: #86928b;
   font-family: Raleway;
@@ -1405,7 +1407,7 @@ a:active {
 }
 @media (max-width: 400px) {
   .footer__nav {
-    max-width: 283px;
+    max-width: 360px;
     width: 100%;
     grid-template-columns: repeat(2, max-content);
     -moz-column-gap: 0px;
