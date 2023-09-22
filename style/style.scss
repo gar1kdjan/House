@@ -31,13 +31,24 @@
 // @import "pages/team/team";
 // @import "pages/footer/footer";
 
-@import "./././fonts/fonts";
-@import "./././pages/main/main";
-@import "./././setting/settings";
-@import "./././setting/common";
-@import "./././pages/header/header";
-@import "./././pages/catalog/catalog";
-@import "./././pages/catalog/cards";
-@import "./././pages/new_collection/new";
-@import "./././pages/team/team";
-@import "./././pages/footer/footer";
+// @import "./././fonts/fonts";
+// @import "./././pages/main/main";
+// @import "./././setting/settings";
+// @import "./././setting/common";
+// @import "./././pages/header/header";
+// @import "./././pages/catalog/catalog";
+// @import "./././pages/catalog/cards";
+// @import "./././pages/new_collection/new";
+// @import "./././pages/team/team";
+// @import "./././pages/footer/footer";
+
+@import "../style/fonts/fonts";
+@import "../style/pages/main/main";
+@import "../style/setting/settings";
+@import "../style/setting/common";
+@import "../style/pages/header/header";
+@import "../style/pages/catalog/catalog";
+@import "../style/pages/catalog/cards";
+@import "../style/pages/new_collection/new";
+@import "../style/pages/team/team";
+@import "../style/pages/footer/footer";
