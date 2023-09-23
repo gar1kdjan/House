@@ -1414,7 +1414,7 @@ a:active {
 }
 @media (max-width: 400px) {
   .footer__nav {
-    max-width: 362px;
+    max-width: 360px;
     width: 100%;
     grid-template-columns: repeat(2, max-content);
     -moz-column-gap: 0px;
