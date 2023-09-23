@@ -80,8 +80,9 @@
     height: 35px;
     align-items: center;
     gap: 8px;
-    // &-img {
-    // }
+    @media (max-width: $xs) {
+      margin-top: 23px;
+    }
     &-title {
       color: #598d66;
       font-family: Raleway;
@@ -151,7 +152,7 @@
       justify-content: space-between;
     }
     @media (max-width: $xs) {
-      max-width: 360px;
+      max-width: 362px;
       width: 100%;
       grid-template-columns: repeat(2, max-content);
       column-gap: 0px;
