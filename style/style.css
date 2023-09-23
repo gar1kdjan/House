@@ -1,13 +1,13 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Raleway";
-  src: url("style/fonts/Raleway-ThinItalic.woff") format("truetype");
+  src: url("./style/fonts/Raleway-ThinItalic.woff") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Raleway";
-  src: url("style/fonts/Raleway-Regular.woff") format("truetype");
+  src: url("./style/fonts/Raleway-Regular.woff") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
