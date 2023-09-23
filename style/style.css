@@ -663,8 +663,8 @@ a:active {
 }
 @media (max-width: 576px) {
   .catalog__countries {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
 }
 .catalog__btn {
@@ -1058,7 +1058,7 @@ a:active {
 }
 @media (max-width: 400px) {
   .new__text {
-    max-width: 259px;
+    max-width: 290px;
     width: 100%;
     height: auto;
     margin-top: 20px;
